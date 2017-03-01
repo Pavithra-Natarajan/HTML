@@ -1,0 +1,45 @@
+.head2
+{
+	float:left;
+	font-size: 50px;
+	font-family: sans-serif;
+	font-weight: bold;
+	width: 30%;
+}
+.nav
+{
+	float: right;
+    background-color: cyan;
+    padding: 0px;
+    width:60%;
+
+}
+.nav ul
+{
+	padding: 0px;
+}
+body
+{
+	
+	margin: auto;
+}
+.nav li
+{
+	display: inline;
+	font-size: 20px;
+	text-decoration: none;
+
+}
+.head1
+{
+height: 50px;
+}
+.grid_4
+{
+	background-color: red;
+	width:100%;	
+}
+body
+{
+	padding: 0px;
+}
