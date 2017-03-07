@@ -1,0 +1,106 @@
+#body
+{
+	background-color: #1BF1AD;
+	font-family: Sofia;
+}
+.nav h1
+{
+	font-size: 20px;
+}
+.nav li
+{
+   margin-top: 10px;
+	font-size: 20px;
+	margin-left: 20px;
+}
+.navbar .navbar-default {
+   background-color: pink;
+}
+.navbar-toogle
+{
+	margin-top: 10px;
+}
+#carousel1
+{
+	background-color:#BFC9CA;
+	margin-top: 100px;
+}
+ .carousel-inner  .item > img,
+  .carousel-inner  .item > a > img {
+      width: 40%;
+      margin: auto;
+  }
+#firstsection
+{
+	margin-top: 50px;
+	background-color: green;
+	font-family: Sofia;
+}
+#firstsection h2
+{
+	color: orange;
+}
+#firstsection p
+{
+	font-size:17px;
+	color:#f3f3f3;
+	font-style: italic;
+
+}
+#secondsection
+{
+	margin-top:20px;
+	background-color: cyan;
+	font-size:16px;
+	background-color: #8A8A86;
+	margin-bottom: 20px;
+}
+#secondsection p
+{
+	margin-top:20px;
+}
+#thirdsection p
+{
+	margin-top:20px;
+
+}
+#thirdsection
+{
+	background-color: #E297E0;
+}
+#col3
+{
+	font-size: 17px;
+}
+#firstrow
+{
+	background-color: #FBF97D;
+}
+#secondrow
+{
+background-color: cyan;
+}
+#thirdrow
+{
+	background-color: orange;
+}
+footer
+{
+background-color: #333;
+color:#eee;
+}
+.unstyled li
+{
+	list-style: none;
+    
+}
+#imagefooter li
+{
+	display: inline;
+}
+.unstyled img
+{
+	height:40px;
+	width:40px;
+
+}
