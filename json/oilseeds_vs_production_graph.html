@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <svg id="visualisation" width="5000" height="500"></svg>
+  <script>
+  d3.json("oilseeds_vs_production_json.json",function(data)
+  {
+    data.sort(function(a,b)
+      {
+        return b.Production-a.Production;
+      });
+    var vis = d3.select("#visualisation"),
+      WIDTH = 1000,
+      HEIGHT = 500,
+      MARGINS = {
+          top: 20,
+          right: 40,
+          bottom: 20,
+          left: 50
+      },
+xScale = d3.scale.ordinal().rangeRoundBands([50,2000]);
+xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+xScale.domain(data.map(function(d) { return d.Particulars; }));
+yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0,25]),
+xAxis = d3.svg.axis()
+    .scale(xScale),
+yAxis = d3.svg.axis()
+    .scale(yScale);
+vis.append("svg:g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
+    .call(xAxis);
+yAxis = d3.svg.axis()
+    .scale(yScale)
+    .orient("left");
+vis.append("svg:g")
+    .attr("transform", "translate(" + (MARGINS.left) + ",0)")
+    .call(yAxis);
+var lineGen = d3.svg.line()
+    .x(function(d) {
+      return xScale(d.Particulars);
+    })
+    .y(function(d) {
+      return yScale(d.Production);
+    });
+vis.append('svg:path')
+  .attr('d', lineGen(data))
+  .attr('stroke', 'green')
+  .attr('stroke-width', 2)
+  .attr('fill', 'none')
+});
+</script>
+</body>
+</html>
